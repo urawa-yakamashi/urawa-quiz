@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>クイズ(仮)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <style>
+        img {
+            pointer-events: none;
+        }
+        @media print{
+            *{
+                display: none;
+            }
+        }
+    </style>
+    <!-- Javascript -->
+    <script src="js/index.js"></script>
+</head>
+<body oncontextmenu="alert('右クリック禁止');return false">
+    <header>
+        <!-- ルール説明のページ -->
+        <h1 id="game_title">クイズ(仮)</h1>
+    </header>
+    <div>
+        <p id="quiz_rule_description_title">〜ルール説明〜</p>
+        <p id="quiz_rule_description_box" class="box">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+    </div>
+    <div id="quiz_start_botton_area">
+        <button type="button" value="start" id="ready">READY?</button>
+    </div>
+
+    <!-- クイズゲーム本編 -->
+    <div id="quiz_game_phase">
+        <p id="quiz_title">○○クイズ</p>
+        <div id="remaining_time">
+            <p>残り時間:<meter id="remaining_meter" value="120" min="0" max="180" low="30" high="60"></meter></p>
+        </div>
+        <div id="question_area">
+            <p>第<span id="question_number">テキスト</span>問:</p>
+            <p><span id="question">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</span></p>
+        </div>
+        <!-- 画像なしの場合 -->
+        <div>
+            <ul id="sentence_only">
+                <li>テキスト１</li>
+                <li>テキスト２</li>
+                <li>テキスト３</li>
+                <li>テキスト４</li>
+            </ul>
+            <!-- index.jsによって選択肢の個数分出力 -->
+            <!-- 画像ありの場合 -->
+            <!-- <ul id="image_is_used">
+                <li class="image_is_used" id="list1">てきすと１</li>
+                <li class="image_is_used" id="list2">てきすと２</li>
+                <li class="image_is_used" id="list3">てきすと３</li>
+                <li class="image_is_used" id="list4">てきすと４</li>
+            </ul> -->
+            <!-- index.jsによって選択肢の個数分出力 -->
+        </div>   
+
+    </div>
+    <div id="judge_screen">
+        <div>
+            <button id="next">次へ <i aria-hidden="true"></i></button>
+        </div>
+    </div>
+    <div id="incorrect_screen">
+    </div>
+    <div>
+    </div>
+    <div id="quiz_result_phase">
+        <p>全問終了！！</p>
+        <p>あなたの正解数は…</p>
+        <p id="result_comment">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <!-- index.jsによって出力 -->
+
+    </div>
+    <div id="user_entry_phase">
+        <p>ユーザー名を登録して、ランキングに参加！</p>
+        <p>１位になって、みんなに自慢しよう！</p>
+        <input type="text" id="user_name" name="namaeTouroku" placeholder="例：はらみー" required>
+        <button type="submit" id="user_entry">送信</button>
+    </div>
+    <div id="thanks_phase">
+        <p>ご参加ありがとうございました！</p>
+        <p id="thanks_image"><img src=""></p>
+        <p>ランキングページはこちらです。</p>
+        <a href="/front/ranking.html">現在の順位表</a>
+
+        <!-- SNSのアイコン画像 -->
+    </div>
+</body>
+</html>

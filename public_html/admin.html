@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>クイズ管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- CSS -->
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/admin.css" rel="stylesheet">
+    
+    <!-- Javascript -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/admin.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="qcms_title">QCMS</h1>
+        <h2 class="qcms_subtitle">〜クイズアプリ管理ページへようこそ〜</h2>
+        <nav>
+            <ul class="tab_select">
+                <li><input type="radio" class="tab_item" name="tab_item" id="quiz_entry" value="#quiz_entry" onClick="location.href=this.value" checked>
+                    <label class="tab_item" for="quiz_entry">クイズ登録</label></li>
+                <li><input type="radio" class="tab_item" name="tab_item" id="quiz_list" value="#quiz_list" onClick="location.href=this.value">
+                    <label class="tab_item" for="quiz_list">クイズ一覧</label></li>
+                <li><input type="radio" class="tab_item" name="tab_item" id="result_option" value="#result_option" onClick="location.href=this.value">
+                    <label class="tab_item" for="result_option">結果発表</label></li>
+                <li><input type="radio" class="tab_item" name="tab_item" id="other_option" value="#other_option" onClick="location.href=this.value">
+                    <label class="tab_item" for="other_option">オプション</label></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="tab-content">
+            <div id="quiz_entry">
+                <h1 class="tab_title">クイズ登録フォーム</h1>
+                <!-- 説明文 -->
+                <h2></h2>
+                <form>
+                    <p><label for="quesion_sentence">問題文</label></p>
+                    <input type="text" id="question" name="mondaiBun" class="quiz_form">
+                    <input type="checkbox" id="question_type" name="gazoWoTsukau">画像を使う
+                    <p><label for="quesion_image">問題画像</label></p>
+                    <input type="file" id="question_img" name="mondaiGazo" class="quiz_form">
+                    <p><label for="choice_total_of_question">選択肢の数</label></p>
+                    <p><input type="number" id="choice_total_of_quesiton" name="sentakushiNoKazu" min="2" max="10" class="quiz_form"></p>
+                    <input type="checkbox" id="which_type_of_choice" name="gazoWoTsukau">画像を使う
+                    
+                    <!-- 選択肢が文章,admin.jsより出力 -->
+                    <div id="choice_is_sentence">
+                        <p><label for="choice_total_of_question">選択肢1</label></p>
+                        <input type="text" id="choice1" name="sentakushi1" class="quiz_form">
+                        <p><label for="choice_total_of_question">選択肢2</label></p>
+                        <input type="text" id="choice2" name="sentakushi2" class="quiz_form">
+                        <p><label for="choice_total_of_question">選択肢3</label></p>
+                        <input type="text" id="choice3" name="sentakushi3" class="quiz_form">
+                        <p><label for="choice_total_of_question">選択肢4</label></p>
+                        <input type="text" id="choice4" name="sentakushi4" class="quiz_form">
+                        <p><label for="choice_total_of_question">選択肢5</label></p>
+                        <input type="text" id="choice5" name="sentakushi5" class="quiz_form">
+                        <p><label for="choice_total_of_question">選択肢6</label></p>
+                        <input type="text" id="choice6" name="sentakushi6" class="quiz_form">
+                        <p><label for="choice_total_of_question">選択肢7</label></p>
+                        <input type="text" id="choice7" name="sentakushi7" class="quiz_form">
+                        <p><label for="choice_total_of_question">選択肢8</label></p>
+                        <input type="text" id="choice8" name="sentakushi8" class="quiz_form">
+                        <p><label for="choice_total_of_question">選択肢9</label></p>
+                        <input type="text" id="choice9" name="sentakushi9" class="quiz_form">
+                        <p><label for="choice_total_of_question">選択肢10</label></p>
+                        <input type="text" id="choice10" name="sentakushi10" class="quiz_form">
+                    </div>
+                    
+                    <!-- 選択肢が画像,admin.jsより出力-->
+                    <div id="choice_is_image">
+                        <p><label for="choice_total_of_question">選択肢1</label></p>
+                        <input type="file" id="choice1" name="sentakushi1" class="quiz_form">
+                        <p><label for="choice_total_of_question">選択肢2</label></p>
+                        <input type="file" id="choice2" name="sentakushi2" class="quiz_form">
+                        <p><label for="choice_total_of_question">選択肢3</label></p>
+                        <input type="file" id="choice3" name="sentakushi3" class="quiz_form">
+                        <p><label for="choice_total_of_question">選択肢4</label></p>
+                        <input type="file" id="choice4" name="sentakushi4" class="quiz_form">
+                        <p><label for="choice_total_of_question">選択肢5</label></p>
+                        <input type="file" id="choice5" name="sentakushi5" class="quiz_form">
+                        <p><label for="choice_total_of_question">選択肢6</label></p>
+                        <input type="file" id="choice6" name="sentakushi6" class="quiz_form">
+                        <p><label for="choice_total_of_question">選択肢7</label></p>
+                        <input type="file" id="choice7" name="sentakushi7" class="quiz_form">
+                        <p><label for="choice_total_of_question">選択肢8</label></p>
+                        <input type="file" id="choice8" name="sentakushi8" class="quiz_form">
+                        <p><label for="choice_total_of_question">選択肢9</label></p>
+                        <input type="file" id="choice9" name="sentakushi9" class="quiz_form">
+                        <p><label for="choice_total_of_question">選択肢10</label></p>
+                        <input type="file" id="choice10" name="sentakushi10" class="quiz_form">
+                    </div>
+
+                    <p><label for="answer_choice_number">解答番号</label></p>
+                    <input type="text" id="answer_choice_no" name="kaitoBango" class="quiz_form">
+                    <button id="quiz_data_submit" form="quiz_entry_form" type="submit">送信</button>
+                </form>
+            </div>
+            <div id="quiz_list">
+                <h1 class="tab_title">クイズ一覧</h1>
+                <!-- 説明文 -->
+                <h2></h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>問題文</th>
+                            <th>選択肢</th>
+                            <th>正解</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>強いのは？</td>
+                            <td>
+                                <ul>
+                                    <li>1.西武</li>
+                                    <li>2.ソフトバンク</li>
+                                    <li>3.日本ハム</li>
+                                    <li>4.楽天</li>
+                                </ul>
+                            </td>
+                            <td>4</td>
+                        </tr>
+                    </thead>
+                    <tbody id="quiz_tbody">
+                        <!-- 以下admin.jsより出力 -->
+                            <!-- え、そんなゴリ押しやる？ -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="result_option">
+                <h1 class="tab_title">結果発表の文章</h1>
+                <!-- 説明文 -->
+                <h2></h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>正解率</th>
+                            <th>結果発表の文章</th>
+                        </tr>
+                        <tr><td>100%</td><td>おめでとう！全問正解です！</td></tr>
+                        <tr><td>0~99%</td><td>もっと勉強しましょう</td></tr>
+                    </thead>
+                    <tbody>
+                        <!-- admin.jsより出力？ -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="other_option">
+                <h1 class="tab_title">オプション</h1>
+                <!-- 説明文 -->
+                <h2></h2>
+                <!-- すでに登録されている内容を、ボックスに表示しておく -->
+                <!-- テキストボックスにカーソル、あるいは入力状態にすると、その欄の解説が出てくる -->
+                
+                <form id="option_entry_form" method="post" action="API/setOption.php">
+                    <p><label>タイトル名</label></p>
+                    <input type="text" id="quiz_game_title" name="taitoruMei">
+                    <p><label>ルール説明の内容</label></p>
+                    <input type="text" id="quiz_rule_description" name="ru-ruSetsumeiNoNaiyou">
+                    <p><label>不正解の画像</label></p>
+                    <input type="file" id="incorrect_image" name="fuseikaiNoGazo">
+                    <p><label>正解の画像</label></p>
+                    <input type="file" id="correct_image" name="seikaiNoGazo">
+                    <p><label>お礼の画像</label></p>
+                    <input type="file" id="thanks_image" name="oreiNoGazo">
+                    <button form="option_entry_form" type="submit">送信</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

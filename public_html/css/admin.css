@@ -1,0 +1,126 @@
+/*要素のフォントサイズやマージン・パディングをリセットしています*/
+/* 愚策。普通にやれ */
+
+/* QCMSの文字の大きさ */
+.qcms_title{
+    font-size: 48px;
+    color: #840000;
+    text-align: center;
+}
+.qcms_subtitle{
+    font-size: 24px;
+    color: #840000;
+    text-align: center;
+}
+
+/* 各タブのページレイアウト */
+.tab-content{
+    width: 75%;
+    margin: 50px auto 0;
+}
+
+/* 各タブのページタイトル */
+.tab_title{
+    font-size: 50px;
+    margin-top: 30px;
+    margin-left: 30px; 
+}
+
+.tab_select {
+    position: left;
+    display: block;
+    clear: both;
+    padding-right: 100%;
+    margin-top: 5px;
+    margin-left: 0;
+    /* タブon左 */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+/*タブのスタイル*/
+.tab_item {
+    float: left;
+    width: calc(100%/4);
+    height: 50px;
+    border-bottom: 6px solid #020085;
+    background-color: #840000;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color:  white;
+    display: block;
+    font-weight: bold;  
+}
+.tab_item:hover{
+    background-color: #440000;
+}
+
+/* radioボタンを非表示にする */
+input{
+    margin: 20px;
+}
+
+input[name="tab_item"] {
+    display: none;
+}
+input[type="text"] {
+    padding: 5px;
+    border-radius: 10px;
+}
+input[type="number"]{
+    padding: 5px;
+}
+#quesion_sentence {
+    width:500px;
+}
+/* テキストボックス */
+
+
+/*各タブの表示・非表示*/
+/* .tab-content{
+    display: none;
+} */
+/*  */
+#choice_is_sentence{
+    display: block
+}
+＃choice_is_image{
+    display: none
+}
+
+/* クイズ登録画面 */
+.quiz_form{
+    color: inherit;
+    box-sizing: border-box
+}
+
+.fixed{
+    position:fixed;
+}
+
+/* 選択肢 */
+#choice_is_sentence{
+    display: block;
+}
+#choice_is_image{
+    display: none;
+}
+
+/* 選択したタブを立体化 */
+
+/* 一覧画面のパワーアップ */
+
+
+/* 結果発表画面のパワーアップ */
+/* オプション画面のパワーアップ */
+
+/* 細かい要素 */
+/* 文字 */
+    /* 大きさ */
+    /* 配置 */
+/* チェックボックス */
+    /* 大きさ */
+    /* 配置 */
+/*  */
+/* 問題・選択肢画像どうすんのけ */

@@ -1,0 +1,17 @@
+input{
+    
+}
+th,td{
+    border: solid 1px;
+    padding: 10px;
+}
+
+table{
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 30px 30% 30px;
+}
+
+.box{
+    border: 3px solid black;
+}

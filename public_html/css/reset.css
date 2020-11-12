@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* resetCSS Document */
+
+/*----------layout----------*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{ margin:0;padding:0;} 
+table { border-collapse:collapse;border-spacing:0;} 
+fieldset,img {border:0;} 
+address,caption,cite,code,dfn,em,th,var {font-style:normal;font-weight:normal;} 
+li{list-style:none;} 
+caption,th{text-align:left;}
+q:before,q:after {ontent:'';} 
+abbr,acronym { border:0;} 
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+
+.alt{position:absolute;top:-5000px;left:-999px;}
+.alttext{text-indent:-1000px;}
+.floatleft{float:left;}
+.floatright{float:right;}
+.clearboth{clear:both;}
+.clearfloat
+{
+	height:1px;
+	font-size:1%;
+	clear:both;
+	display:block;
+}
+
+
+/*----------font----------*/
+h1,h2,h3,h4,h5,h6 {font-size:100%; font-weight:normal;} 
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}
+
+
+/*clear-fix
+div:after {
+	content: ".";
+	display: block;
+	visibility: hidden;
+	height: 0.1px;
+	font-size: 0.1em;
+	line-height: 0;
+	clear: both;
+}
+div {
+	display: inline-block;
+}
+*/

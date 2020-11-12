@@ -1,0 +1,100 @@
+/* 画像どうすんのけ */
+
+/* ようこそ画面 */
+#game_title{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#quiz_rule_description_title{
+    font-size: 30px;
+    text-align: center;
+}
+
+#quiz_rule_description_box{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 10px;
+}
+#quiz_start_botton_area{
+    margin: 5%;
+    text-align: center;
+}
+#ready{
+    width:15%;
+    /* height: 60%; */
+    line-height: 40px;
+    font-size: 16px;
+    padding: 5px;
+    color: #fff;
+    background-color: #00f;
+    transition-property: opacity;
+    transition-duration: 0.25s;
+    transition-timing-function :ease-in-out;
+    border-radius: 10px;
+    opacity: 2;
+}
+#ready:hover{
+    opacity: 0.5;
+}
+
+#quiz_title{
+    font-size: 300%;
+    margin-top: 15%;
+    margin-left: 10%;
+}
+
+/* 残り時間 */
+#remaining_time{
+    font-size: 20px;
+    width: 10%;
+    margin: 0 10% 5% 80%;
+}
+#remaining_meter{
+    width: 200px;
+    font-size: 35px;
+}
+
+/* 問題文のエリア */
+#question_area{
+    font-size: 20px;
+    border: 1px solid black;
+    padding: 15px;
+    margin: 0 10% 20px;
+    border-radius: 10px;
+}
+#question_area p:nth-child(1){
+    font-size: 25px;
+}
+
+/* 選択肢 */
+/* 文章のみ */
+#sentence_only li{
+    font-size: 20px;
+    border: 1px solid black;
+    padding: 15px;
+    margin: 0 15% 15px;
+    border-radius: 10px;
+}
+
+#image_is_used li{
+    font-size: 20px;
+}
+
+/* 次へボタン */
+#next{
+    width: 10%;
+    margin: 0 45% 0;
+    line-height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: greenyellow
+}
+
+#next:hover{
+    background-color: green;
+    color: white;
+}
